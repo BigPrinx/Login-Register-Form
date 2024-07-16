@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            width: 360px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .form {
+            display: none;
+        }
+        .form.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="form-container">
+                <form id="loginForm" class="form active">
+                    <h2 class="mb-4">Login</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control mb-4" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control mb-4" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-orange btn-block mb-4">Login</button>
+                    <p class="text-center">Don't have an account? <span class="toggle-form text-orange">Signup</span></p>
+                </form>
+                <form id="signupForm" class="form">
+                    <h2 class="mb-4">Signup</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control mb-4" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control mb-4" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control mb-4" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-orange btn-block mb-4">Signup</button>
+                    <p class="text-center">Already have an account? <span class="toggle-form text-orange">Login</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function() {
+            $('.toggle-form').on('mouseenter', function() {
+                $('#loginForm, #signupForm').toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
+

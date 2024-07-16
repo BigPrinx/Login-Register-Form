@@ -1,0 +1,61 @@
+/* Body styles */
+body {
+    background-color: #f8f9fa; /* Bootstrap default body background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Form container styles */
+.form-container {
+    width: 360px;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+    overflow: hidden;
+}
+
+/* Form styles */
+.form {
+    display: none; /* Initially hide all forms */
+}
+
+.form.active {
+    display: block; /* Display active form */
+}
+
+/* Toggle form link styles */
+.toggle-form {
+    cursor: pointer;
+    color: #f97316; /* Orange color */
+}
+
+.toggle-form:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.btn-orange {
+    background-color: #f97316; /* Orange color */
+    border-color: #f97316; /* Border color */
+    transition: background-color 0.3s, border-color 0.3s;
+    color: white; /* Text color */
+}
+
+.btn-orange:hover {
+    background-color: #ea580c; /* Darker orange color on hover */
+    border-color: #ea580c; /* Darker border color on hover */
+}
+
+/* Input styles */
+.form-control {
+    margin-bottom: 1rem; /* Spacing between inputs */
+    border-color: #ced4da; /* Default border color */
+}
+
+/* Text color for toggle links */
+.text-orange {
+    color: #f97316; /* Orange color */
+}
